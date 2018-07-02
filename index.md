@@ -1,6 +1,6 @@
 ---
 title: Index
-layout: home
+layout: hacker
 ---
 
 Yayy
