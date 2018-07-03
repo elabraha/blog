@@ -22,5 +22,6 @@ theme: jekyll-theme-hacker
 plugins:
 - jekyll-feed
 navbar-links:
-  About Me: "pages.about"
-  Author's home: "http://www.elianaabraham.com"
+  Home: "http://www.elianaabraham.com/blog"
+  Author's Website: "http://www.elianaabraham.com"
+  About Me: "http://www.elianaabraham.com/blog/about/"

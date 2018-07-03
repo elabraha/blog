@@ -1,5 +1,5 @@
 ---
-title: index page
+title: Home Page
 layout: index
 ---
 

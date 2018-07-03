@@ -1,5 +1,4 @@
 ---
-title: index page
 layout: default
 ---
 
@@ -11,9 +10,10 @@ layout: default
     {% include header.html %} 
 
     <body>
+    	{% include nav.html %} 
         <section>
 
-            {{pages.content}}
+            {{page.content}}
 
         </section>
     </body>

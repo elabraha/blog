@@ -1,0 +1,6 @@
+<div class="sidenav">
+	<h1>./{{site.title}}</h1>
+	{% for link in site.navbar-links %}
+		<a href="{{link[1]}}">{{link[0]}}</a>
+	{% endfor%}
+</div>
