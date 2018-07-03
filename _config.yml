@@ -9,7 +9,7 @@ collections:
     title: Uploads
     output: true
 email: elabraha@umich.edu
-description: This is my blogsite.
+description: Welcome to my blog. Enjoy :)
 baseurl: "/blog"
 url: http://elianaabraham.com
 twitter_username: jekyllrb
