@@ -5,6 +5,9 @@ collections:
   posts:
     title: Posts
     output: true
+  pages:
+    title: Pages
+    output: true
   uploads:
     title: Uploads
     output: true
@@ -18,3 +21,6 @@ markdown: kramdown
 theme: jekyll-theme-hacker
 plugins:
 - jekyll-feed
+navbar-links:
+  About Me: "pages.about"
+  Author's home: "http://www.elianaabraham.com"
