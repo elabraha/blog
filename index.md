@@ -1,6 +1,6 @@
 ---
-title: Index
+title: site index
 layout: default
 ---
 
-Yayy
+We did it!
