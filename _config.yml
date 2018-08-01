@@ -19,7 +19,7 @@ show_downloads: false
 twitter_username: abrajamz
 github_username: elabraha
 markdown: kramdown
-theme: hacker-theme-expanded
+theme: jekyll-theme-hacker
 plugins:
 - jekyll-feed
 - jekyll-sitemap
