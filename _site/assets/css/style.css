@@ -93,6 +93,8 @@ hr { height: 0; border: 0; border-bottom: 1px dashed #b5e853; color: #b5e853; }
 
 /* Links a, a:hover, a:visited
 */
+a { font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; }
+
 /* Clearfix */
 .cf:before, .cf:after { content: ""; display: table; }
 
@@ -102,20 +104,46 @@ hr { height: 0; border: 0; border-bottom: 1px dashed #b5e853; color: #b5e853; }
 
 div.sidenav { height: 100%; width: 200px; position: fixed; z-index: 1; margin: auto; top: 0; left: 0; background: #151515 url("../images/bkg.png") 0 0; color: #eaeaea; overflow-x: hidden; padding-top: 20px; border-right: 1px dashed #b5e853; }
 
-.sidenav a { padding: 6px 8px 6px 30px; text-decoration: none; font-size: 16px; color: #b5e853; display: block; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.2), 0 0 10px rgba(181, 232, 83, 0.7); }
+a.sidenav { padding: 6px 8px 6px 30px; text-decoration: none; font-size: 14px; text-align: left; color: #b5e853; display: block; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.2), 0 0 10px rgba(181, 232, 83, 0.7); }
 
-.sidenav a:hover { color: #BDFF7F; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 10px #BDFF7F; }
+a.sidenav:hover { color: #BDFF7F; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 10px #BDFF7F; }
 
 i { color: #b5e853; padding: 6px 8px 20px 30px; font-size: 30px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.2), 0 0 10px rgba(181, 232, 83, 0.7); }
 
 .footer { left: 0; position: fixed; bottom: 0; margin-left: 260px; /* Same as the width of the sidenav */ size: 14px; }
 
+a.myButton:before { font-family: FontAwesome; content: "\f02b"; }
+
+a.myButton { display: block; }
+
+.myButton { background-color: #24de55 !important; -moz-border-radius: 9px; -webkit-border-radius: 9px; border-radius: 9px; display: inline-block; cursor: pointer; color: white !important; font-size: 11px !important; padding-left: 7px !important; padding-right: 7px !important; padding-top: 14px !important; padding-bottom: 14px !important; text-shadow: 0px 1px 5px #3fa32f !important; }
+
+div.myButton { margin: 3px; }
+
+.myButton:hover { background-color: #41fc37; color: white; }
+
+.myButton:active { position: relative; top: 1px; background-color: light-blue; color: white; }
+
+.sidenav a, .dropdown-btn { padding: 6px 8px 6px 30px; text-decoration: none; font-size: 14px; text-align: left; color: #b5e853; display: block; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.2), 0 0 10px rgba(181, 232, 83, 0.7); border: none; background: none; width: 100%; text-align: left; cursor: pointer; outline: none; font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; }
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover { color: #BDFF7F; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 10px #BDFF7F; }
+
+.fa-caret-down { font-size: 14px; float: right; padding: 2px 8px 6px 20px; }
+
+.active { background-color: green; color: white; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px white; }
+
 @media screen and (max-height: 450px) { .sidenav { padding-top: 15px; }
   .sidenav a { font-size: 14px; } }
+.dropdown-container { display: none; background-color: #262626; padding-left: 8px; }
+
 @media screen and (max-width: 600px) { .sidenav { display: none; }
   .container { margin-left: 0; }
   .footer { margin-left: 20px; } }
-@media screen and (max-width: 500px) { header { margin-left: 40px; } }
+@media screen and (max-width: 500px) { header { margin-left: 40px; }
+  header h1 { font-size: 20px; }
+  header h2 { font-size: 12px; }
+  header h1:before { font-size: 16px; } }
 @media all and (min-width: 50px) and (max-width: 100px) { body { font-size: 0.1em; }
   .footer { font-size: 0.1em; } }
 @media all and (min-width: 100px) and (max-width: 300px) { body { font-size: 0.4em; }

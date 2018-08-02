@@ -2,7 +2,41 @@
 	<i class="fas fa-terminal"></i>
 	{% for link in site.navbar-links %}
 		{% if link[0] %}
-		<a class="sidenav" href="{{link[1]}}" >{{link[0]}}</a>
+			{% if link[0] == "Tags" %}
+				<button class="dropdown-btn">{{ link[0] }}<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container">
+					{% for tag in site.tags %}
+						<a href="#" class="myButton">{{ tag[0] }}</a>
+					{% endfor %}
+				</div>
+			{% elsif link[0] == "Catagories" %}
+				<button class="dropdown-btn">{{ link[0] }}<i class="fa fa-caret-down"></i></button>
+				<div class="dropdown-container">
+					{% for catagory in site.catagories %}
+						<a href="#">{{ category[0] }}</a>
+					{% endfor %}
+				</div>
+			{% else %}
+				<a class="sidenav" href="{{link[1]}}" >{{link[0]}}</a>
+			{% endif %}
 		{% endif%}
 	{% endfor %}
 </div>
+<script type="text/javascript">
+	//* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+	var dropdown = document.getElementsByClassName("dropdown-btn");
+	var i;
+
+	for (i = 0; i < dropdown.length; i++) {
+	  dropdown[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var dropdownContent = this.nextElementSibling;
+	    console.log(this.nextElementSibling);
+	    if (dropdownContent.style.display === "block") {
+	      dropdownContent.style.display = "none";
+	    } else {
+	      dropdownContent.style.display = "block";
+	    }
+	  });
+	}
+</script>
