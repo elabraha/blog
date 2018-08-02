@@ -8,8 +8,9 @@ $blockquote-color: $silver-chalice !default;
 $blockquote-border: $dove-grey !default;
 
 body {
-  margin: 0;
+  margin-right: auto;
   padding: 0;
+  width: 100%;
   background: $body-background url("../images/bkg.png") 0 0;
   color: $body-foreground;
   font-size: 16px;
@@ -20,9 +21,9 @@ body {
 /* General & 'Reset' Stuff */
 
 .container {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
+  width: 70%;
+  margin-left: 200px;
+  max-width: 100%;
 }
 
 section {
@@ -34,9 +35,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
 }
 
-li {
-  line-height: 1.4 ;
-}
+// li {
+//   line-height: 1.4 ;
+// }
 
 /* Header, <header>
    header   - container
@@ -45,11 +46,13 @@ li {
 */
 
 header {
-  background: rgba(0, 0, 0, 0.1);
-  width: 100%;
+  background: $body-background url("../images/bkg.png") 0 0;
+  color: $body-foreground;
   border-bottom: 1px dashed $conifer; //header;
-  padding: 20px 0;
-  margin: 0 0 40px 0;
+  // padding: 20px 0;
+  // margin: 0 0 40px 0;
+  margin-top: 20px;
+  margin-left: 100px;
 }
 
 header h1 {
@@ -60,21 +63,24 @@ header h1 {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   color: $conifer;//$header;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
-               0 0 5px rgba(181, 232, 83, 0.1),
-               0 0 10px rgba(181, 232, 83, 0.1);
+           0 0 5px rgba(181, 232, 83, 0.2),
+           0 0 10px rgba(181, 232, 83, 0.7);
   letter-spacing: -1px;
   -webkit-font-smoothing: antialiased;
 }
 
 header h1:before {
   content: "./ ";
-  font-size: 24px;
+  font-size: 26px;
 }
 
 header h2 {
   font-size: 18px;
   font-weight: 300;
-  color: #666;
+  color: cyan;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+          0 0 5px rgba(130, 180, 250, 0.2),
+          0 0 10px rgba(130, 180, 250, 0.7);
 }
 
 #downloads .btn {
@@ -87,7 +93,11 @@ header h2 {
 */
 
 #main_content {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 50px;
   width: 100%;
+  overflow: auto;
   -webkit-font-smoothing: antialiased;
 }
 section img {
@@ -232,10 +242,10 @@ hr {
    a, a:hover, a:visited
 */
 
-a {
-  color: #63c0f5;
-  text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
-}
+// a {
+//   color: #63c0f5;
+//   text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
+// }
 
 /* Clearfix */
 
@@ -251,3 +261,80 @@ a {
 .cf {
   zoom:1;
 }
+
+
+div.sidenav {
+  height: 100%; 
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  margin: auto;
+  top: 0;
+  left: 0;
+  background: $body-background url("../images/bkg.png") 0 0;
+  color: $body-foreground;
+  overflow-x: hidden;
+  padding-top: 20px;
+  border-right: 1px dashed $conifer;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 30px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #b5e853;
+  display: block;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+           0 0 5px rgba(181, 232, 83, 0.2),
+           0 0 10px rgba(181, 232, 83, 0.7);
+}
+
+.sidenav a:hover {
+  color: #BDFF7F;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+       // 0 0 5px #BDFF7F,
+       0 0 10px #BDFF7F;
+}
+
+i {
+  color: #b5e853;
+  padding: 6px 8px 20px 30px;
+  font-size: 30px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+           0 0 5px rgba(181, 232, 83, 0.2),
+           0 0 10px rgba(181, 232, 83, 0.7);
+}
+
+.footer {
+  left: 0;
+  position: fixed;
+  bottom: 0;
+  margin-left: 260px;/* Same as the width of the sidenav */
+  size: 14px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 14px;}
+}
+
+
+@media screen and (max-width: 600px) {
+  .sidenav {display: none;}
+  .container {margin-left: 0;}
+  .footer {margin-left: 20px;}
+}
+
+@media screen and (max-width: 500px) {
+  header {margin-left: 40px;}
+}
+
+@media all and (min-width: 50px) and (max-width: 100px)  { body { font-size:0.1em; } .footer { font-size:0.1em; }}
+@media all and (min-width: 100px) and (max-width: 300px) { body { font-size:0.4em; } .footer { font-size:0.2em; }}
+@media all and (min-width: 300px) and (max-width: 500px) { body { font-size:0.5em; } .footer { font-size:0.2em; }}
+@media all and (min-width: 500px) and (max-width: 600px) { body { font-size:0.7em; } .footer { font-size:0.5em; }}
+@media all and (min-width: 600px) and (max-width: 700px) { body { font-size:0.8em; } .footer { font-size:0.6em; }}
+@media all and (min-width: 700px) and (max-width: 800px) { body { font-size:0.8em; } .footer { font-size:0.7em; }}
+@media all and (min-width: 800px) and (max-width: 900px) { body { font-size:0.9em; } .footer { font-size:0.9em; }}
+@media all and (min-width: 900px) and (max-width: 1700px) { .footer { font-size:1.0em; }}
+@media all and (min-width: 1700px) { .container { font-size:2.0em; } }

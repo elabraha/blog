@@ -22,32 +22,30 @@
 .highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx { color: #90a959; }
 .highlight .ss { color: #90a959; }
 
-body { margin: 0; padding: 0; background: #151515 url("../images/bkg.png") 0 0; color: #eaeaea; font-size: 16px; line-height: 1.5; font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; }
+body { margin-right: auto; padding: 0; width: 100%; background: #151515 url("../images/bkg.png") 0 0; color: #eaeaea; font-size: 16px; line-height: 1.5; font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; }
 
 /* General & 'Reset' Stuff */
-.container { width: 90%; max-width: 1000px; margin: 0 auto; }
+.container { width: 70%; margin-left: 200px; max-width: 100%; }
 
 section { display: block; margin: 0 0 20px 0; }
 
 h1, h2, h3, h4, h5, h6 { margin: 0 0 20px; }
 
-li { line-height: 1.4; }
-
 /* Header, <header> header   - container h1       - project name h2       - project description
 */
-header { background: rgba(0, 0, 0, 0.1); width: 100%; border-bottom: 1px dashed #b5e853; padding: 20px 0; margin: 0 0 40px 0; }
+header { background: #151515 url("../images/bkg.png") 0 0; color: #eaeaea; border-bottom: 1px dashed #b5e853; margin-top: 20px; margin-left: 100px; }
 
-header h1 { font-size: 30px; line-height: 1.5; margin: 0 0 0 -40px; font-weight: bold; font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; color: #b5e853; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.1), 0 0 10px rgba(181, 232, 83, 0.1); letter-spacing: -1px; -webkit-font-smoothing: antialiased; }
+header h1 { font-size: 30px; line-height: 1.5; margin: 0 0 0 -40px; font-weight: bold; font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; color: #b5e853; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.2), 0 0 10px rgba(181, 232, 83, 0.7); letter-spacing: -1px; -webkit-font-smoothing: antialiased; }
 
-header h1:before { content: "./ "; font-size: 24px; }
+header h1:before { content: "./ "; font-size: 26px; }
 
-header h2 { font-size: 18px; font-weight: 300; color: #666; }
+header h2 { font-size: 18px; font-weight: 300; color: cyan; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(130, 180, 250, 0.2), 0 0 10px rgba(130, 180, 250, 0.7); }
 
 #downloads .btn { display: inline-block; text-align: center; margin: 0; }
 
 /* Main Content
 */
-#main_content { width: 100%; -webkit-font-smoothing: antialiased; }
+#main_content { margin-left: auto; margin-right: auto; padding: 5px 50px; width: 100%; overflow: auto; -webkit-font-smoothing: antialiased; }
 
 section img { max-width: 100%; }
 
@@ -95,11 +93,42 @@ hr { height: 0; border: 0; border-bottom: 1px dashed #b5e853; color: #b5e853; }
 
 /* Links a, a:hover, a:visited
 */
-a { color: #63c0f5; text-shadow: 0 0 5px rgba(104, 182, 255, 0.5); }
-
 /* Clearfix */
 .cf:before, .cf:after { content: ""; display: table; }
 
 .cf:after { clear: both; }
 
 .cf { zoom: 1; }
+
+div.sidenav { height: 100%; width: 200px; position: fixed; z-index: 1; margin: auto; top: 0; left: 0; background: #151515 url("../images/bkg.png") 0 0; color: #eaeaea; overflow-x: hidden; padding-top: 20px; border-right: 1px dashed #b5e853; }
+
+.sidenav a { padding: 6px 8px 6px 30px; text-decoration: none; font-size: 16px; color: #b5e853; display: block; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.2), 0 0 10px rgba(181, 232, 83, 0.7); }
+
+.sidenav a:hover { color: #BDFF7F; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 10px #BDFF7F; }
+
+i { color: #b5e853; padding: 6px 8px 20px 30px; font-size: 30px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.2), 0 0 10px rgba(181, 232, 83, 0.7); }
+
+.footer { left: 0; position: fixed; bottom: 0; margin-left: 260px; /* Same as the width of the sidenav */ size: 14px; }
+
+@media screen and (max-height: 450px) { .sidenav { padding-top: 15px; }
+  .sidenav a { font-size: 14px; } }
+@media screen and (max-width: 600px) { .sidenav { display: none; }
+  .container { margin-left: 0; }
+  .footer { margin-left: 20px; } }
+@media screen and (max-width: 500px) { header { margin-left: 40px; } }
+@media all and (min-width: 50px) and (max-width: 100px) { body { font-size: 0.1em; }
+  .footer { font-size: 0.1em; } }
+@media all and (min-width: 100px) and (max-width: 300px) { body { font-size: 0.4em; }
+  .footer { font-size: 0.2em; } }
+@media all and (min-width: 300px) and (max-width: 500px) { body { font-size: 0.5em; }
+  .footer { font-size: 0.2em; } }
+@media all and (min-width: 500px) and (max-width: 600px) { body { font-size: 0.7em; }
+  .footer { font-size: 0.5em; } }
+@media all and (min-width: 600px) and (max-width: 700px) { body { font-size: 0.8em; }
+  .footer { font-size: 0.6em; } }
+@media all and (min-width: 700px) and (max-width: 800px) { body { font-size: 0.8em; }
+  .footer { font-size: 0.7em; } }
+@media all and (min-width: 800px) and (max-width: 900px) { body { font-size: 0.9em; }
+  .footer { font-size: 0.9em; } }
+@media all and (min-width: 900px) and (max-width: 1700px) { .footer { font-size: 1.0em; } }
+@media all and (min-width: 1700px) { .container { font-size: 2.0em; } }

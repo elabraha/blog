@@ -26,7 +26,8 @@ plugins:
 - jekyll-paginate
 - jekyll-seo-tag
 navbar-links:
-  Home: "https://www.elianaabraham.com/blog"
+  Home: "/blog"
   Author's Website: "https://www.elianaabraham.com"
-  About Me: "https://www.elianaabraham.com/blog/about/"
+  About Me: "/blog/about/"
+  Archive: "/blog/archive/"
   Tags: 
