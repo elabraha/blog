@@ -5,26 +5,38 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/blog/assets/css/style.css?v=69fd2ea2190071ce3bc52a070401ba56c3096d3a">
+    <link rel="stylesheet" href="/blog/assets/css/style.css?v=3aa67da0ee29fc421a3d5f3b628ffb24a6f2dfe2">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
   <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Eliana’s Blog | Welcome to my blog. Enjoy :)</title>
 <meta name="generator" content="Jekyll v3.7.3" />
 <meta property="og:title" content="Eliana’s Blog" />
+<meta name="author" content="Eliana Abraham" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Welcome to my blog. Enjoy :)" />
 <meta property="og:description" content="Welcome to my blog. Enjoy :)" />
-<link rel="canonical" href="https://elianaabraham.com/blog/" />
-<meta property="og:url" content="https://elianaabraham.com/blog/" />
+<link rel="canonical" href="http://localhost:4000/blog/" />
+<meta property="og:url" content="http://localhost:4000/blog/" />
 <meta property="og:site_name" content="Eliana’s Blog" />
 <script type="application/ld+json">
-{"headline":"Eliana’s Blog","url":"https://elianaabraham.com/blog/","description":"Welcome to my blog. Enjoy :)","name":"Eliana’s Blog","@type":"WebSite","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/blog/","author":{"@type":"Person","name":"Eliana Abraham"},"headline":"Eliana’s Blog","description":"Welcome to my blog. Enjoy :)","name":"Eliana’s Blog","@type":"WebSite","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
 
   
+<header>
+  <div class="container" >
+    
+      <h1>Eliana's Blog</h1>
+      <h2>Welcome to my blog. Enjoy :)</h2>
+        
+    
+    
+  </div>
+</header>
+
 
   <body>
     <div class="sidenav">
@@ -32,7 +44,7 @@
 	
 		
 			
-				<a class="sidenav" href="/blog" >Home</a>
+				<a class="sidenav" href="/blog/" >Home</a>
 			
 		
 	
@@ -56,19 +68,18 @@
 	
 		
 			
-				<button class="dropdown-btn">Tags<i class="fa fa-caret-down"></i></button>
-				<div class="dropdown-container">
-					
-						<a href="#" class="myButton">Hello_World</a>
-					
-				</div>
+				<a class="sidenav" href="/blog/tags/" >Tags</a>
 			
 		
 	
 		
 			
-				<button class="dropdown-btn">Catagories<i class="fa fa-caret-down"></i></button>
+				<button class="dropdown-btn">Categories<i class="fa fa-caret-down"></i></button>
 				<div class="dropdown-container">
+					
+						<a href="/blog/categories/jekyll/">jekyll</a>
+					
+						<a href="/blog/categories/update/">update</a>
 					
 				</div>
 			
@@ -79,55 +90,45 @@
 	//* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 	var dropdown = document.getElementsByClassName("dropdown-btn");
 	var i;
-
 	for (i = 0; i < dropdown.length; i++) {
-	  dropdown[i].addEventListener("click", function() {
-	    this.classList.toggle("active");
-	    var dropdownContent = this.nextElementSibling;
-	    console.log(this.nextElementSibling);
-	    if (dropdownContent.style.display === "block") {
-	      dropdownContent.style.display = "none";
-	    } else {
-	      dropdownContent.style.display = "block";
-	    }
-	  });
+		dropdown[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var dropdownContent = this.nextElementSibling;
+			if (dropdownContent.style.display === "block") {
+			  dropdownContent.style.display = "none";
+			} else {
+			  dropdownContent.style.display = "block";
+			}
+		});
 	}
 </script>
-
+    
     <!DOCTYPE html>
 <html lang="en-US">
 
-<!--      -->
-
-    
-<header>
-  <div class="container" >
-    
-      <h1>Eliana's Blog</h1>
-      <h2>Welcome to my blog. Enjoy :)</h2>
-      <section id="downloads">
-        
-    </section>
-    
-  </div>
-</header>
- 
-
     <div class="container">
-      <section id="main_content">
-        <h1>Latest Post</h1>
-		
-			<span class="post-meta">Jul 2, 2018</span>
-			<h2>
-			<a href="/blog/jekyll/update/2018/07/02/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-			</h2>
-			<p><p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+		<section id="main_content">
+			
+				<h1 class="front-page">Latest Post</h1>
+				
+					<a class="front-page" href="/blog/2018/08/14/my-new-post/">My New Post</a>
+					<span class="post-meta-symbol">=></span>
+					<span class="post-meta">Aug 14, 2018</span>
+					<p><h2 id="who-are-you">who are you?</h2>
+<p>What have you done with my nuggets??</p>
+</p>
+				
+				<h1 class="front-page">Recent Posts</h1>
+				
+					<a class="front-page" href="/blog/jekyll/update/2018/07/02/welcome-to-jekyll/">Welcome to Jekyll!</a>
+					<span class="post-meta-symbol">=></span>
+					<span class="post-meta">Jul 2, 2018</span>
+					<p><p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 </p>
-		
-		<h1>Recent Posts</h1>
-		
-      </section>
+				
+			
+     	</section>
     </div>
 
     <div class="footer">

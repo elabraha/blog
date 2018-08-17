@@ -1,3 +1,13 @@
 source 'http://rubygems.org'
-gem "github-pages", group: :jekyll_plugins
-gem "jekyll-paginate"
+
+gem 'jekyll'
+
+group :jekyll_plugins do
+	gem "github-pages"
+	gem "jekyll-feed"
+    gem "jekyll-sitemap"
+    gem "jekyll-paginate"
+    gem "jekyll-seo-tag"
+    gem "jekyll-compose"
+    gem "jekyll-category-pages"
+end

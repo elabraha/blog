@@ -1,10 +1,8 @@
 ---
 title: Eliana's Blog
-timezone: UTC
+author: Eliana Abraham
+timezone: America/New_York
 collections:
-  posts:
-    title: Posts
-    output: true
   pages:
     title: Pages
     output: true
@@ -15,20 +13,28 @@ email: elabraha@umich.edu
 description: Welcome to my blog. Enjoy :)
 baseurl: "/blog"
 url: https://elianaabraham.com
+permalink: pretty
 show_downloads: false
 twitter_username: abrajamz
 github_username: elabraha
 markdown: kramdown
 theme: jekyll-theme-hacker
 plugins:
-- jekyll-feed
-- jekyll-sitemap
-- jekyll-paginate
-- jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-category-pages
 navbar-links:
-  Home: "/blog"
+  Home: "/blog/"
   Author's Website: "https://www.elianaabraham.com"
   About Me: "/blog/about/"
   Archive: "/blog/archive/"
-  Tags:
-  Catagories:
+  Tags: "/blog/tags/"
+  Categories: "/blog/categories/"
+jekyll-compose: 
+  auto_open: true
+category_dir: "./_pages/categories/"
+category_path: "categories/"
+plugins_dir: "./_plugins/"
+---

@@ -1,9 +1,9 @@
 ---
 title: Welcome to Jekyll!
 date: 2018-07-02 20:25:38 Z
-categories:
-- jekyll
-- update
+categories: 
+  - jekyll
+  - update
 layout: post
 tags: Hello_World
 ---

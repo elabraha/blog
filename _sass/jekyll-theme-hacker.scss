@@ -1,7 +1,7 @@
 @import "rouge-base16-dark";
 @import "default_colors";
 
-$body-background: $cod-grey !default;
+$body-background: black !default;
 $body-foreground: $gallery !default;
 $header: $conifer !default;
 $blockquote-color: $silver-chalice !default;
@@ -9,9 +9,9 @@ $blockquote-border: $dove-grey !default;
 
 body {
   margin-right: auto;
-  padding: 0;
+  padding-bottom: 20px;
   width: 100%;
-  background: $body-background url("../images/bkg.png") 0 0;
+  background: $body-background 0 0;
   color: $body-foreground;
   font-size: 16px;
   line-height: 1.5;
@@ -32,7 +32,7 @@ section {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 20px;
+  margin: 0 0 5px;
 }
 
 // li {
@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 */
 
 header {
-  background: $body-background url("../images/bkg.png") 0 0;
+  background: $body-background 0 0;
   color: $body-foreground;
   border-bottom: 1px dashed $conifer; //header;
   // padding: 20px 0;
@@ -72,15 +72,24 @@ header h1 {
 header h1:before {
   content: "./ ";
   font-size: 26px;
+  margin-bottom: 20px;
 }
 
 header h2 {
   font-size: 18px;
   font-weight: 300;
-  color: cyan;
+  color: $hippie-blue;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
           0 0 5px rgba(130, 180, 250, 0.2),
           0 0 10px rgba(130, 180, 250, 0.7);
+  margin-bottom: 10px;
+}
+
+header h6 {
+  color: grey;
+  font-size: 12px;
+  margin-top: -5px;
+  margin-bottom: 10px;
 }
 
 #downloads .btn {
@@ -115,15 +124,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #main_content h1 {
-  font-size: 30px;
+  font-size: 26px;
 }
 
 #main_content h2 {
-  font-size: 24px;
+  font-size: 21px;
 }
 
 #main_content h3 {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #main_content h4 {
@@ -159,11 +168,11 @@ blockquote {
 }
 
 pre {
-  background: rgba(0, 0, 0, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(60,60,80,0.5);
+  border: 1px solid rgba(200, 200, 200, 0.1);
   padding: 10px;
   font-size: 16px;
-  color: #b5e853;
+  color: #e0b24e;
   border-radius: 2px;
   word-wrap: normal;
   overflow: auto;
@@ -171,11 +180,11 @@ pre {
 }
 
 code.highlighter-rouge {
-  background: rgba(0,0,0,0.9);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(60,60,80,0.5);
+  border: 1px solid rgba(200, 200, 200, 0.1);
   padding: 0px 3px;
   margin: 0px -3px;
-  color: #aa759f;
+  color: #e55095;
   border-radius: 2px;
 }
 
@@ -242,13 +251,49 @@ hr {
    a, a:hover, a:visited
 */
 
-// a {
-//   color: #63c0f5;
-//   text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
-// }
-
 a {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  color: #2bff8e;
+  // text-shadow: 0 0 1px rgba(79, 255, 161, 1);
+}
+
+a:hover {
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  color: white;
+  // text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+a:visited {
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  color: #9600c4;
+  text-shadow: 0 0 1px rgba(209, 61, 255, 1);
+}
+
+a.front-page {
+  letter-spacing: -0.03em;
+  font-size: 21px;
+  font-weight: normal;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 20px;
+}
+
+h1.front-page {
+  letter-spacing: -0.03em;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.post-meta {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: $grey;
+}
+
+.post-meta-symbol {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: $conifer;
 }
 
 /* Clearfix */
@@ -275,7 +320,7 @@ div.sidenav {
   margin: auto;
   top: 0;
   left: 0;
-  background: $body-background url("../images/bkg.png") 0 0;
+  background: $body-background 0 0;
   color: $body-foreground;
   overflow-x: hidden;
   padding-top: 20px;
@@ -290,8 +335,8 @@ a.sidenav {
   color: #b5e853;
   display: block;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
-           0 0 5px rgba(181, 232, 83, 0.2),
-           0 0 10px rgba(181, 232, 83, 0.7);
+           0 0 5px rgba(181, 232, 83, 0.7),
+           0 0 10px rgba(181, 232, 83, 0.3);
 }
 
 a.sidenav:hover {
@@ -302,20 +347,25 @@ a.sidenav:hover {
 }
 
 i {
-  color: #b5e853;
+  color: $conifer;
   padding: 6px 8px 20px 30px;
   font-size: 30px;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
-           0 0 5px rgba(181, 232, 83, 0.2),
-           0 0 10px rgba(181, 232, 83, 0.7);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5),
+          0 0 5px rgba(181, 232, 83, 0.7),
+          0 0 10px rgba(198, 255, 94, 0.5);
 }
 
 .footer {
   left: 0;
   position: fixed;
   bottom: 0;
-  margin-left: 260px;/* Same as the width of the sidenav */
+  margin-left: 200px;/* Same as the width of the sidenav */
+  padding-left: 60px;
+  padding-top: 5px;
   size: 14px;
+  background-color: black;
+  width: 100%;
+  border-top: 1px dashed $conifer;
 }
 
 a.myButton:before {
@@ -328,19 +378,20 @@ a.myButton {
 }
 
 .myButton {
-  background-color: #24de55 !important;
+  background-color: #24de55;
   -moz-border-radius: 9px;
   -webkit-border-radius: 9px;
   border-radius: 9px;
   display: inline-block;
   cursor: pointer;
-  color: white !important;
-  font-size: 11px !important;
-  padding-left: 7px !important;
-  padding-right: 7px !important;
-  padding-top: 14px !important;
-  padding-bottom: 14px !important;
-  text-shadow: 0px 1px 5px #3fa32f !important;
+  color: white;
+  font-size: 9px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-decoration: none;
+  text-shadow: 0px 1px 5px #3fa32f;
 }
 
 div.myButton {
@@ -358,16 +409,23 @@ div.myButton {
   color: white;
 }
 
-.sidenav a, .dropdown-btn {
+.dropdown-container {
+  display: none;
+  border-bottom: 1px dashed $conifer;
+  border-top: 1px dashed $conifer;
+  border-left: 1px dashed $conifer;
+}
+
+.sidenav a, .dropdown-btn{
   padding: 6px 8px 6px 30px;
   text-decoration: none;
   font-size: 14px;
   text-align: left;
-  color: #b5e853;
+  color: $conifer;
   display: block;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
-           0 0 5px rgba(181, 232, 83, 0.2),
-           0 0 10px rgba(181, 232, 83, 0.7);
+           0 0 5px rgba(181, 232, 83, 0.7),
+           0 0 10px rgba(181, 232, 83, 0.3);
   border: none;
   background: none;
   width:100%;
@@ -378,6 +436,13 @@ div.myButton {
 }
 
 /* On mouse-over */
+.dropdown-container a:hover {
+  background-color: #1c1c1c;
+  color: #BDFF7F;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+      0 0 10px #BDFF7F;
+}
+
 .sidenav a:hover, .dropdown-btn:hover {
   color: #BDFF7F;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
@@ -390,22 +455,29 @@ div.myButton {
   padding: 2px 8px 6px 20px;
 }
 
-.active  {
-  background-color: green;
+.active {
+  border-top: 1px dashed $conifer;
+  border-left: 1px dashed $conifer;
+  color: silver;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+      0 0 5px grey;
+}
+
+.active:hover {
   color: white;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
       0 0 5px white;
 }
 
+.active i{
+  color: grey;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+      0 0 5px grey;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 14px;}
-}
-
-.dropdown-container {
-  display: none;
-  background-color: #262626;
-  padding-left: 8px;
 }
 
 @media screen and (max-width: 600px) {
