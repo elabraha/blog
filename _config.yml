@@ -25,6 +25,8 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-category-pages
+  - jekyll-asciinema
+  - jekyll-tagging
 navbar-links:
   Home: "/blog/"
   Author's Website: "https://www.elianaabraham.com"
@@ -37,4 +39,6 @@ jekyll-compose:
 category_dir: "./_pages/categories/"
 category_path: "categories/"
 plugins_dir: "./_plugins/"
+tag_page_layout: tag_page
+tag_page_dir: tags
 ---

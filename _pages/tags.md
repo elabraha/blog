@@ -1,9 +1,5 @@
 ---
-layout: index
+layout: tags
 title: Tags
 permalink: /tags/
 ---
-
-<div class="myButton"> 
-	<a class="myButton" href="#">tag1</a>
-</div>

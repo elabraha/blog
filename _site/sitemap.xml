@@ -2,15 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://elianaabraham.com/blog/about/</loc>
-<lastmod>2018-08-17T14:58:17-04:00</lastmod>
+<lastmod>2018-08-21T14:10:26-04:00</lastmod>
 </url>
 <url>
 <loc>https://elianaabraham.com/blog/archive/</loc>
-<lastmod>2018-08-17T14:58:17-04:00</lastmod>
+<lastmod>2018-08-21T14:10:26-04:00</lastmod>
 </url>
 <url>
 <loc>https://elianaabraham.com/blog/tags/</loc>
-<lastmod>2018-08-17T14:58:17-04:00</lastmod>
+<lastmod>2018-08-21T14:10:26-04:00</lastmod>
 </url>
 <url>
 <loc>https://elianaabraham.com/blog/jekyll/update/2018/07/02/welcome-to-jekyll/</loc>
@@ -25,6 +25,15 @@
 </url>
 <url>
 <loc>https://elianaabraham.com/blog/categories_alt_folder/jekyll/</loc>
+</url>
+<url>
+<loc>https://elianaabraham.com/blog/tags/hello_world/</loc>
+</url>
+<url>
+<loc>https://elianaabraham.com/blog/tags/start/</loc>
+</url>
+<url>
+<loc>https://elianaabraham.com/blog/tags/hello/</loc>
 </url>
 <url>
 <loc>https://elianaabraham.com/blog/categories/jekyll/</loc>

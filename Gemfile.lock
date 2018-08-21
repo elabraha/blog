@@ -99,6 +99,8 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
+    jekyll-asciinema (0.2.0)
+      jekyll (>= 2.0)
     jekyll-avatar (0.5.0)
       jekyll (~> 3.0)
     jekyll-category-pages (1.0.0)
@@ -148,6 +150,8 @@ GEM
     jekyll-sitemap (1.2.0)
       jekyll (~> 3.3)
     jekyll-swiss (0.4.0)
+    jekyll-tagging (1.1.0)
+      nuggets
     jekyll-theme-architect (0.1.1)
       jekyll (~> 3.5)
       jekyll-seo-tag (~> 2.0)
@@ -213,6 +217,7 @@ GEM
     multipart-post (2.0.0)
     nokogiri (1.8.3)
       mini_portile2 (~> 2.3.0)
+    nuggets (1.6.0)
     octokit (4.9.0)
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.1)
@@ -250,12 +255,14 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll
+  jekyll-asciinema
   jekyll-category-pages
   jekyll-compose
   jekyll-feed
   jekyll-paginate
   jekyll-seo-tag
   jekyll-sitemap
+  jekyll-tagging
 
 BUNDLED WITH
    1.16.2

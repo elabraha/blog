@@ -10,4 +10,6 @@ group :jekyll_plugins do
     gem "jekyll-seo-tag"
     gem "jekyll-compose"
     gem "jekyll-category-pages"
+    gem "jekyll-asciinema"
+    gem "jekyll-tagging"
 end

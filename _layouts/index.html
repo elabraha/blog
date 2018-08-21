@@ -2,31 +2,27 @@
 layout: default
 ---
 
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-
-    <div class="container">
-		<section id="main_content">
-			{% if page.title %}
-				{{ content }}
-			{% else %}
-				<h1 class="front-page">Latest Post</h1>
-				{% for post in site.posts limit:1 %}
-					<a class="front-page" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-					<span class="post-meta-symbol">=></span>
-					<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-					<p>{{ post.excerpt }}</p>
-				{% endfor %}
-				<h1 class="front-page">Recent Posts</h1>
-				{% for post in site.posts offset:1 limit:2 %}
-					<a class="front-page" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-					<span class="post-meta-symbol">=></span>
-					<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-					<p>{{ post.excerpt }}</p>
-				{% endfor %}
-			{% endif %}
-     	</section>
-    </div>
-
-    {% include footer.html %}
-</html>
+<div class="container">
+	<section id="main_content">
+		{% if page.title %}
+			{{ content }}
+		{% elsif layout.title %}
+			{{ content }}
+		{% else %}
+			<h1 class="front-page">Latest Post</h1>
+			{% for post in site.posts limit:1 %}
+				<a class="front-page" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+				<span class="post-meta-symbol">=></span>
+				<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+				<p>{{ post.excerpt }}</p>
+			{% endfor %}
+			<h1 class="front-page">Recent Posts</h1>
+			{% for post in site.posts offset:1 limit:2 %}
+				<a class="front-page" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+				<span class="post-meta-symbol">=></span>
+				<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+				<p>{{ post.excerpt }}</p>
+			{% endfor %}
+		{% endif %}
+ 	</section>
+</div>

@@ -1,8 +1,9 @@
-{% if page.is_post %}
-{% else %}
 <header>
   <div class="container" >
-    {% if page.title %} <h1>{{ page.title }}</h1>
+    {% if page.title %} 
+      <h1 style="margin-bottom: 5px;">{{ page.title }}</h1>
+    {% elsif layout.title %} 
+      <h1 style="margin-bottom: 5px;">{{ layout.title }}</h1>
     {% else %}
       <h1>{{ site.title | default: site.github.repository_name }}</h1>
       <h2>{{ site.description | default: site.github.project_tagline }}</h2>
@@ -14,10 +15,9 @@
           </section>
         {% endif %}
     {% endif %}
-    {% if page.date %}
+    {% if layout.is_post %}
       <h2>by {{ page.author | default: site.author }}</h2>
       <h6>{{ page.date | date: "%-d %B %Y" }}</h6>
     {% endif %}
   </div>
 </header>
-{% endif %}

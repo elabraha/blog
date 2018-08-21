@@ -35,11 +35,11 @@ h1, h2, h3, h4, h5, h6 { margin: 0 0 5px; }
 */
 header { background: black 0 0; color: #a3a3a3; border-bottom: 1px dashed #adf920; margin-top: 20px; margin-left: 100px; }
 
-header h1 { font-size: 30px; line-height: 1.5; margin: 0 0 0 -40px; font-weight: bold; font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; color: #adf920; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.2), 0 0 10px rgba(181, 232, 83, 0.7); letter-spacing: -1px; -webkit-font-smoothing: antialiased; }
+header h1 { font-size: 30px; line-height: 1.5; margin: 0 0 0 -40px; font-weight: bold; font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; color: #adf920; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(181, 232, 83, 0.7), 0 0 10px rgba(181, 232, 83, 0.5); letter-spacing: -1px; -webkit-font-smoothing: antialiased; }
 
 header h1:before { content: "./ "; font-size: 26px; margin-bottom: 20px; }
 
-header h2 { font-size: 18px; font-weight: 300; color: #5ed1ff; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(130, 180, 250, 0.2), 0 0 10px rgba(130, 180, 250, 0.7); margin-bottom: 10px; }
+header h2 { font-size: 18px; font-weight: 300; color: #5ed1ff; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(130, 180, 250, 0.7), 0 0 10px rgba(130, 180, 250, 0.5); margin-bottom: 10px; }
 
 header h6 { color: grey; font-size: 12px; margin-top: -5px; margin-bottom: 10px; }
 
@@ -126,17 +126,17 @@ i { color: #adf920; padding: 6px 8px 20px 30px; font-size: 30px; text-shadow: 0 
 
 .footer { left: 0; position: fixed; bottom: 0; margin-left: 200px; /* Same as the width of the sidenav */ padding-left: 60px; padding-top: 5px; size: 14px; background-color: black; width: 100%; border-top: 1px dashed #adf920; }
 
-a.myButton:before { font-family: FontAwesome; content: "\f02b"; }
+a.myButton { display: inline-block; padding-left: 10px; padding-right: 10px; padding-top: 2px; padding-bottom: 2px; background-color: #24de55; }
 
-a.myButton { display: block; }
+.myButton { -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; display: inline-block; cursor: pointer; color: white; font-size: 11px; text-decoration: none; text-shadow: 0px 1px 5px #3fa32f; }
 
-.myButton { background-color: #24de55; -moz-border-radius: 9px; -webkit-border-radius: 9px; border-radius: 9px; display: inline-block; cursor: pointer; color: white; font-size: 9px; padding-left: 7px; padding-right: 7px; padding-top: 14px; padding-bottom: 14px; text-decoration: none; text-shadow: 0px 1px 5px #3fa32f; }
+.myButton:visited { color: white; }
 
-div.myButton { margin: 3px; }
+div.myButton { margin: 1px; }
 
 .myButton:hover { background-color: #41fc37; color: white; }
 
-.myButton:active { position: relative; top: 1px; background-color: light-blue; color: white; }
+.active-button a.myButton { background-color: #69b7ff; color: white; }
 
 .dropdown-container { display: none; border-bottom: 1px dashed #adf920; border-top: 1px dashed #adf920; border-left: 1px dashed #adf920; }
 
@@ -154,6 +154,8 @@ div.myButton { margin: 3px; }
 .active:hover { color: white; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px white; }
 
 .active i { color: grey; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 5px grey; }
+
+.tags-page-buttons { margin-top: 20px; margin-bottom: 20px; }
 
 @media screen and (max-height: 450px) { .sidenav { padding-top: 15px; }
   .sidenav a { font-size: 14px; } }

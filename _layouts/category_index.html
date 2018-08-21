@@ -3,20 +3,20 @@ layout: index
 ---
 
 <section class="category-post-list">
-	{% assign category = page.category %}
+{% assign category = page.category %}
 
-	{% assign posts = site.categories[category] %}
-	{% for post in posts %}
-		{% assign currentDate = post.date | date: "%Y" %}
-		{% if currentDate != myDate %}
-	    	{% unless forloop.first %}</ul>{% endunless %}
-	    	<h1>{{ currentDate }}</h1>
-	    	<ul>
-	    	{% assign myDate = currentDate %}
-	  	{% endif %}
-	  	<li><a href="{{ post.url | prepend: site.baseurl }}"><span>{{ post.date | date: "%B %-d, %Y" }}</span> - {{ post.title }}</a></li>
-	  	{% if forloop.last %}
-			</ul>
-		{% endif %}
-	{% endfor %}
+{% assign posts = site.categories[category] %}
+{% for post in posts %}
+	{% assign currentDate = post.date | date: "%Y" %}
+	{% if currentDate != myDate %}
+    	{% unless forloop.first %}</ul>{% endunless %}
+    	<h2>{{ currentDate }}</h2>
+    	<ul>
+    	{% assign myDate = currentDate %}
+  	{% endif %}
+  	<li><a href="{{ post.url | prepend: site.baseurl }}"><span>{{ post.date | date: "%B %-d, %Y" }}</span> - {{ post.title }}</a></li>
+  	{% if forloop.last %}
+		</ul>
+	{% endif %}
+{% endfor %}
 </section>
