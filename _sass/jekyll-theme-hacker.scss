@@ -21,8 +21,7 @@ body {
 /* General & 'Reset' Stuff */
 
 .container {
-  width: 70%;
-  margin-left: 200px;
+  width: 100%;
   max-width: 100%;
 }
 
@@ -52,7 +51,7 @@ header {
   // padding: 20px 0;
   // margin: 0 0 40px 0;
   margin-top: 20px;
-  margin-left: 100px;
+  padding-left: 40px;
 }
 
 header h1 {
@@ -108,6 +107,7 @@ header h6 {
   width: 100%;
   overflow: auto;
   -webkit-font-smoothing: antialiased;
+  transition: margin-left .5s;
 }
 section img {
   max-width: 100%
@@ -313,11 +313,10 @@ h1.front-page {
 
 
 div.sidenav {
+  width: 0;
   height: 100%; 
-  width: 200px;
   position: fixed;
   z-index: 1;
-  margin: auto;
   top: 0;
   left: 0;
   background: $body-background 0 0;
@@ -325,6 +324,16 @@ div.sidenav {
   overflow-x: hidden;
   padding-top: 20px;
   border-right: 1px dashed $conifer;
+  transition: 0.5s;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  transition: 0.5s;
 }
 
 a.sidenav {
@@ -337,6 +346,7 @@ a.sidenav {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
            0 0 5px rgba(181, 232, 83, 0.7),
            0 0 10px rgba(181, 232, 83, 0.3);
+  transition: 0.3s;
 }
 
 a.sidenav:hover {
@@ -359,13 +369,20 @@ i {
   left: 0;
   position: fixed;
   bottom: 0;
-  margin-left: 200px;/* Same as the width of the sidenav */
+  // margin-left: 200px; /* Same as the width of the sidenav */
   padding-left: 60px;
   padding-top: 5px;
   size: 14px;
   background-color: black;
   width: 100%;
   border-top: 1px dashed $conifer;
+}
+
+#footer {
+  transition: 0.5s;
+}
+#header {
+  transition: 0.5s;
 }
 
 a.myButton {
@@ -483,7 +500,7 @@ div.myButton {
 }
 
 @media screen and (max-width: 600px) {
-  .sidenav {display: none;}
+  // .sidenav {display: none;}
   .container {margin-left: 0;}
   .footer {margin-left: 20px;}
 }  

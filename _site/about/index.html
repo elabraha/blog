@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="/blog/assets/css/style.css?v=a019d86f68085e60efb08d65d4e995034ffbbc99"> -->
+    <!-- <link rel="stylesheet" href="/blog/assets/css/style.css?v=d02f660492fecc7954e62976563ad8aaa3692a8c"> -->
     <link rel="stylesheet" href="/blog/assets/css/style.css">
 
   <!-- Begin Jekyll SEO tag v2.5.0 -->
@@ -16,18 +16,20 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="I am a recent computer science grad from the University of Michigan my interests are way to sprawling to cover in one sentance. Everything contained in this blog is everything I am currently crazy about. It changes a lot. Sorry not sorry." />
 <meta property="og:description" content="I am a recent computer science grad from the University of Michigan my interests are way to sprawling to cover in one sentance. Everything contained in this blog is everything I am currently crazy about. It changes a lot. Sorry not sorry." />
-<link rel="canonical" href="http://localhost:4000/blog/about/" />
-<meta property="og:url" content="http://localhost:4000/blog/about/" />
+<link rel="canonical" href="https://elianaabraham.com/blog/about/" />
+<meta property="og:url" content="https://elianaabraham.com/blog/about/" />
 <meta property="og:site_name" content="Eliana’s Blog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-08-21T15:45:09-04:00" />
+<meta property="article:published_time" content="2018-09-10T14:31:27-04:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/blog/about/","author":{"@type":"Person","name":"Eliana Abraham"},"description":"I am a recent computer science grad from the University of Michigan my interests are way to sprawling to cover in one sentance. Everything contained in this blog is everything I am currently crazy about. It changes a lot. Sorry not sorry.","name":"Eliana’s Blog","headline":"About Me","dateModified":"2018-08-21T15:45:09-04:00","datePublished":"2018-08-21T15:45:09-04:00","@type":"WebSite","@context":"http://schema.org"}</script>
+{"url":"https://elianaabraham.com/blog/about/","author":{"@type":"Person","name":"Eliana Abraham"},"description":"I am a recent computer science grad from the University of Michigan my interests are way to sprawling to cover in one sentance. Everything contained in this blog is everything I am currently crazy about. It changes a lot. Sorry not sorry.","name":"Eliana’s Blog","headline":"About Me","dateModified":"2018-09-10T14:31:27-04:00","datePublished":"2018-09-10T14:31:27-04:00","@type":"WebSite","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
-  
-    <header>
+  <span id="menu-btn" style="font-size:30px;cursor:pointer;color:grey;" onclick="openNav()">&#9776;</span>
+  <div id="header">
+    
+      <header>
   <div class="container" >
      
       <h1 style="margin-bottom: 5px;">About Me</h1>
@@ -35,9 +37,11 @@
     
   </div>
 </header>
-  
+    
+  </div>
   <body>
-    <div class="sidenav">
+    <div id="this-nav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color:green;">&times;</a>
 	<i class="fas fa-terminal"></i>
 	
 		
@@ -99,6 +103,24 @@
 			}
 		});
 	}
+
+
+	function openNav() {
+	    document.getElementById("this-nav").style.width = "250px";
+	    document.getElementById("main_content").style.marginLeft = "250px";
+	    document.getElementById("footer").style.marginLeft = "250px";
+	    document.getElementById("header").style.marginLeft = "250px";
+	    document.getElementById("menu-btn").style.visibility = "hidden";
+	}
+
+	function closeNav() {
+	    document.getElementById("this-nav").style.width = "0";
+	    document.getElementById("main_content").style.marginLeft= "0";
+	    document.getElementById("footer").style.marginLeft = "0";
+	    document.getElementById("header").style.marginLeft = "0";
+	    document.getElementById("menu-btn").style.visibility = "visible";
+	}
+
 </script>
     
     <div class="container">
@@ -112,9 +134,11 @@
 
     
   </body>
-  <div class="footer">
+  <div id="footer">
+    <div class="footer">
 	<div class="rc-scout">
 		<script async defer src="https://www.recurse-scout.com/loader.js?t=654e34c1cfda52dab2ba8c92bd94ec54"></script>
 	</div>
 </div>
+  </div>
 </html>

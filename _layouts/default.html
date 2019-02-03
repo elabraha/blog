@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   {% include head.html %}
-  {% if page.title == 404 %}
-  {% else %}
-    {% include header.html %}
-  {% endif %}
+  <span id="menu-btn" style="font-size:30px;cursor:pointer;color:grey;" onclick="openNav()">&#9776;</span>
+  <div id="header">
+    {% if page.title == 404 %}
+    {% else %}
+      {% include header.html %}
+    {% endif %}
+  </div>
   <body>
     {% include nav.html %}
     
@@ -21,5 +24,7 @@
       </script>
     {% endif %}
   </body>
-  {% include footer.html %}
+  <div id="footer">
+    {% include footer.html %}
+  </div>
 </html>
