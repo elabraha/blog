@@ -1,4 +1,6 @@
 # Blog
 This is my blog for a lot of things.
-#### ToDo:
-1. Switch to just site folder so github doesn't precompile site for me. That way I can use my plugins.
+<<<<<<< HEAD
+### Todo:
+1. [ ] move all conent except _/_site_ to a different repository. Turn off jekyll build somehow. And only build locally.
+>>>>>>> 7779043efaf0d70be34941bb06a29f126e5a660d
